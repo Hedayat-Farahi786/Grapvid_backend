@@ -1,0 +1,39 @@
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+venv/
+env/
+ENV/
+.env
+
+# Local configuration files
+config.py
+local_settings.py
+
+# Dependency directories
+*.egg-info/
+dist/
+build/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Log files
+*.log
+
+# IDE specific files
+.idea/
+*.swp
+*.swo
+
+# MacOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+
+# Heroku files
+*.sqlite3
