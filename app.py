@@ -51,7 +51,12 @@ def video_info():
         logger.debug(f"Fetching video info for URL: {url}")
 
         # Use yt-dlp to fetch video info
-        ydl_opts = {}
+        ydl_opts = {
+            'cookiefile': 'cookies.txt',  # Path to your cookies file
+            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3',
+            # Add any other options you need...
+        }
+
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info = ydl.extract_info(url, download=False)
 
