@@ -101,6 +101,8 @@ def download_video():
 
         # Set yt-dlp options to fetch the video and audio URLs
         ydl_opts = {
+            'cookiefile': 'cookies.txt',  # Path to your cookies file
+            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3',
             'format': f'{video_itag}+{audio_itag}',
             'noplaylist': True,
             'skip_download': True,  # Skip actual file download, just get the info
